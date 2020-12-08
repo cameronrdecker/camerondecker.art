@@ -2,17 +2,17 @@ import React from 'react'
 import Layout from '../components/page/layout'
 //import { Typography } from '@material-ui/core'
 
-const AboutPage = () => {
+const StorePage = () => {
 
   return(
     <Layout 
-      title={'About'}
+      title={'Store'}
 
       content={
-        <p>About content</p>
+        <p>Store content</p>
       }
     />
   )
 }
 
-export default AboutPage
+export default StorePage

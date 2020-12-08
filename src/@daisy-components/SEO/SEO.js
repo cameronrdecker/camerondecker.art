@@ -26,7 +26,7 @@ function SEO({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-
+  
   return (
     <Helmet
       htmlAttributes={{
@@ -76,8 +76,10 @@ function SEO({ description, lang, meta, title }) {
   )
 }
 
+let language = typeof window !== 'undefined' ? localStorage.getItem('locale') : 'en'
+
 SEO.defaultProps = {
-  lang: `en`,
+  lang:  language,
   meta: [],
   description: ``,
 }

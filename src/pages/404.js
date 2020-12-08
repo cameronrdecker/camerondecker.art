@@ -1,14 +1,21 @@
 import React from 'react'
+import { Loading, SEO } from '../@daisy-components'
+import {makeStyles, Typography} from '@material-ui/core'
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+const useStyles = makeStyles(theme => ({
+  body:{
+    backgroundColor:'#29657c'
+  }
+}))
 
-const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
+const NotFoundPage = () => {
+
+  return(
+    <div style={{backgroundColor:'#29657c',minHeight:'100%',height:'100%'}}>
+    <SEO title={'404 Not Found'} />
+    <h1>404 Not Found</h1>
+    <p>Can't find that page. Why would you even look for that?</p>
+    </div>
+)}
 
 export default NotFoundPage
